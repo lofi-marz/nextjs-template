@@ -8,7 +8,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "eslint-config-next": "^13.4.13",
     "framer-motion": "^10.15.2",
     "next": "^13.4.6",
