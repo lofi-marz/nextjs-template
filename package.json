@@ -1,37 +1,46 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 3005",
-    "build": "next build",
-    "start": "next start -p 3005",
-    "test": "jest --watch",
-    "test:ci": "jest --ci"
-  },
-  "dependencies": {
-    "clsx": "^2.0.0",
-    "eslint-config-next": "^13.4.13",
-    "framer-motion": "^10.15.2",
-    "next": "^13.4.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.4",
-    "@tailwindcss/typography": "^0.5.9",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "14.4.3",
-    "@types/react": "18.2.18",
-    "autoprefixer": "^10.4.14",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-testing-library": "^5.11.0",
-    "jest": "^29.6.2",
-    "jest-environment-jsdom": "^29.6.2",
-    "postcss": "^8.4.24",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3005",
+        "build": "next build",
+        "start": "next start -p 3005",
+        "test": "vitest dev",
+        "test:ci": "vitest"
+    },
+    "dependencies": {
+        "@headlessui/react": "^1.7.17",
+        "@headlessui/tailwindcss": "^0.2.0",
+        "axios": "^1.4.0",
+        "clsx": "^2.0.0",
+        "eslint-config-next": "^13.4.13",
+        "framer-motion": "^10.16.0",
+        "next": "^13.4.6",
+        "next-themes": "^0.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "react-query": "^3.39.3",
+        "sharp": "^0.32.5",
+        "tailwind-merge": "^1.14.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.4",
+        "@tailwindcss/typography": "^0.5.9",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/user-event": "14.4.3",
+        "@types/react": "18.2.18",
+        "@vitejs/plugin-react": "^4.0.4",
+        "autoprefixer": "^10.4.14",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-testing-library": "^5.11.0",
+        "jest": "^29.6.2",
+        "jest-environment-jsdom": "^29.6.2",
+        "postcss": "^8.4.24",
+        "prettier": "^2.8.8",
+        "prettier-plugin-tailwindcss": "^0.3.0",
+        "tailwindcss": "^3.3.3",
+        "typescript": "^5.1.6",
+        "vitest": "^0.34.2"
+    }
 }
