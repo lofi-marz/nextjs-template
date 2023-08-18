@@ -6,7 +6,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head />
-            <body className={clsx(sans.variable)}>
+            <body className={sans.variable}>
                 <Main />
                 <NextScript />
             </body>
