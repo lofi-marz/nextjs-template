@@ -5,6 +5,7 @@ import colors from 'tailwindcss/colors';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
+import plugin from 'tailwindcss/plugin';
 
 const t: Config = {
     content: [
@@ -22,13 +23,30 @@ const t: Config = {
             colors: {
                 primary: colors.emerald,
                 secondary: colors.red,
-                grey: colors.neutral,
-                light: colors.neutral[50],
-                dark: colors.neutral[950],
+                grey: colors.stone,
+                light: colors.stone[50],
+                dark: colors.stone[950],
+                theme: 'var(--theme)',
+                'theme-invert': 'var(--theme-invert)',
             },
         },
     },
-    plugins: [forms, typography],
+    plugins: [
+        forms,
+        typography,
+        plugin(function ({ addUtilities, theme }) {
+            addUtilities({
+                root: {
+                    '--theme': theme('colors.light'),
+                    '--theme-invert': theme('colors.dark'),
+                },
+                '.dark': {
+                    '--theme': theme('colors.dark'),
+                    '--theme-invert': theme('colors.light'),
+                },
+            });
+        }),
+    ],
 } satisfies Config;
 
 export default t;
